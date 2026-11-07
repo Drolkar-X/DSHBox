@@ -14,7 +14,7 @@
 FROM --platform=linux/arm64 debian:trixie-slim
 
 ARG DSH_VERSION=0.1.0-rc.6
-ARG NODE_VERSION=22.17.0
+ARG NODE_VERSION=24.22.2
 ARG NODE_DISTRO=linux-arm64
 
 ENV DEBIAN_FRONTEND=noninteractive
