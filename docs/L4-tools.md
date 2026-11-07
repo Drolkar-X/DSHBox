@@ -38,7 +38,7 @@ npm rebuild --build-from-source
 - Node 官方 arm64 预编译：`node-v24.22.2-linux-arm64.tar.xz`（构建机为 arm64 时直接用官方产物）。
 - **一次性 arm64 native 预编译清单**（写入 `runtime-bundle/native-manifest.json`，供 DSH 层打包复用）：
 
-> 注（2026-11-06 审计补注）：下面这份清单只是**示例**——`runtime-bundle/native-manifest.json` 文件本身未入库，本仓代码也不读它（全仓仅此一处提及）。其中 `node-pty` 的 `abi` 值（127）**未在构建机实测验证**：node-pty 是在仓外的 WSL2 构建机上、于 DSH 源码树内编译的（见第 4 节），其 ABI 取决于构建机当时所用的 Node 版本，本仓构建链无从定死。实际产物的 ABI 需在 WSL2 构建机上、用目标 Node 跑 `node -p process.versions.modules` 核对后，再回填本示例。
+> 注（2026-11-06 审计补注）：下面这份清单只是**示例**——`runtime-bundle/native-manifest.json` 文件本身未入库，本仓代码不调用它。其中 `node-pty` 的 `abi` 值（127）**未在构建机实测验证**：node-pty 是在仓外的 WSL2 构建机上、于 DSH 源码树内编译的（见第 4 节），其 ABI 取决于构建机当时所用的 Node 版本，本仓构建链无从定死。实际产物的 ABI 需在 WSL2 构建机上、用目标 Node 跑 `node -p process.versions.modules` 核对后，再回填本示例。
 
 ```json
 {
