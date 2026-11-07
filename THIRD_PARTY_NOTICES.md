@@ -6,7 +6,7 @@
 |---|---|---|---|
 | DeepSeek Harness（`@deepseek-ai/dsh` 及子包） | Agent Runtime | MIT | 以 npm 包形式随运行环境分发 |
 | Cordis（`@deepseek-ai/cordis`） | 插件框架 | MIT | npm 包 |
-| Node.js 24.19.0 | JavaScript Runtime | MIT（详见 Node 发行版 LICENSE） | 运行环境内置 |
+| Node.js 24.22.2 | JavaScript Runtime | MIT（详见 Node 发行版 LICENSE） | 运行环境内置 |
 | npm / pnpm | 包管理器 | Artistic-2.0（npm）/ MIT（pnpm） | 随 Node 分发 |
 | Debian GNU/Linux rootfs | Linux 用户空间 | 各包按 Debian 版权文件分别授权 | debootstrap 构建；各包许可证见 rootfs 内 `/usr/share/doc/*/copyright` |
 | PRoot（`libproot.so` / `libproot-loader.so` / `libandroid-shmem.so`） | 用户态沙箱（chroot 替代） | GPL-2+（以源码 COPYING 为准） | 二进制来自 termux-packages 构建；源码见下方链接 |
